@@ -3,6 +3,7 @@ package com.example.myapplication.T04_Activity
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_my_activity.*
@@ -34,6 +35,12 @@ class MyActivity : AppCompatActivity() {
                 }
                 // 또는
                 val str = data?.getStringExtra("resValue")
+
+                // 또는
+                data?.run {
+                    val str = getStringExtra("resValue")
+                    Toast.makeText(this@MyActivity, str, Toast.LENGTH_SHORT).show()
+                }
             }
 
 

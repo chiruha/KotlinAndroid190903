@@ -14,6 +14,7 @@ class NewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_new)
 
         val value = intent.getIntExtra("hello",0)
+
         btnFinish.setOnClickListener {
             val resIntent = Intent()
             resIntent.putExtra("resValue", "hello world")
@@ -22,8 +23,6 @@ class NewActivity : AppCompatActivity() {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-    }
+
 
 }
