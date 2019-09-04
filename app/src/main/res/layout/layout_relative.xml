@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:padding="12dp"
+        android:background="#334161"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/idTextView"
+            android:textSize="50dp"
+            android:text="ID : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:text="hello"
+            android:textSize="30dp"
+            android:layout_toRightOf="@id/idTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/pwTextView"
+            android:textSize="50dp"
+            android:layout_below="@id/idTextView"
+            android:text="PW : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:textSize="30dp"
+            android:text=""
+            android:layout_alignBottom="@id/pwTextView"
+            android:layout_toRightOf="@id/pwTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="LOGIN"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/pwTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
