@@ -7,6 +7,9 @@
     tools:context=".T11_ImageView.ImageViewActivity">
 
     <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitCenter"
+        android:background="#137"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:id="@+id/myImageView"

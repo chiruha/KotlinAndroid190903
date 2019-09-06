@@ -7,7 +7,7 @@ import com.example.myapplication.R
 import kotlinx.android.synthetic.main.activity_xml.*
 import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserFactory
-import java.io.StringReader
+import java.net.URL
 
 class XmlActivity : AppCompatActivity() {
 
@@ -39,12 +39,12 @@ class XmlActivity : AppCompatActivity() {
 
         override fun doInBackground(vararg params: String?): String {
             var res = ""
-//            val path = params[0]!!
-//            val url = URL(path)
+            val path = params[0]!!
+            val url = URL(path)
             val factory = XmlPullParserFactory.newInstance()
             val xpp = factory.newPullParser()
-//            xpp.setInput(url.openStream(), "utf-8")
-            xpp.setInput(StringReader(weatherString))
+            xpp.setInput(url.openStream(), "utf-8")
+//            xpp.setInput(StringReader(weatherString))
             var eventType = xpp.eventType
             var type = WeatherDataType.None
             var data = WeatherData(0,0,0F,"")

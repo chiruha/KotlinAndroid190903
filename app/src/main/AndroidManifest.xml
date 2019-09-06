@@ -3,25 +3,54 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".T11_ImageView.ImageViewActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".T23_Style.MyStyleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".T10_xml.XmlActivity">
 
         </activity>
-        <activity android:name=".T09_AsyncTask.AsyncTaskActivity"></activity>
+
+        <activity android:name=".T21_fragment.MyFragmentActivity">
+
+        </activity>
+
+        <receiver
+            android:name=".T20_BroadcastReceiver.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MoDE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".T20_BroadcastReceiver.BroadcastReceiverActivity" />
+        <activity android:name=".T19_Service.ServiceActivity" />
+        <activity android:name=".T18_SQLite.SQLiteActivity" />
+        <activity android:name=".T17_SharedPreperences.SharedPreperencesActivity" />
+        <activity android:name=".P01_RecyclerView.XmlRecyclerViewActivity" />
+        <activity android:name=".Test_WeatherRecyclerView.WeatherRecyclerViewActivity" />
+        <activity android:name=".T16_RecyclerView.RecyclerViewActivity" />
+        <activity android:name=".T15_Retrofit.RetrofitActivity" />
+        <activity android:name=".T14_JSON.JsonActivity" />
+        <activity android:name=".T13_RunTimePermission.PermissionActivity" />
+        <activity android:name=".T12_WebView.WebViewActivity" />
+        <activity android:name=".T11_ImageView.ImageViewActivity" />
+        <activity android:name=".T10_xml.XmlActivity" />
+        <activity android:name=".T09_AsyncTask.AsyncTaskActivity" />
         <activity android:name=".T08_Thread.ThreadActivity" />
         <activity android:name=".T07_AlertDialog.DialogActivity" />
         <activity android:name=".T06_CustomListView.MyCustomListViewActivity" />

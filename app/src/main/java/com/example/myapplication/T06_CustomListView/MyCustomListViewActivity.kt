@@ -25,15 +25,15 @@ class MyCustomListViewActivity : AppCompatActivity() {
     }
 
     private fun generateData() {
-//        val icons = arrayOf(R.drawable.ic_3d_rotation_black_24dp,
-//            R.drawable.ic_ac_unit_black_24dp,
-//            R.drawable.ic_access_alarm_black_24dp)
-//
-//        for(i in 0..100) {
-//            val icon = icons[i%3]
-//
-//            myList.add(MyData("title $i","desc $i", icon))
-//        }
+        val icons = arrayOf(R.drawable.ic_3d_rotation_black_24dp,
+            R.drawable.ic_ac_unit_black_24dp,
+            R.drawable.ic_access_alarm_black_24dp)
+
+        for(i in 0..100) {
+            val icon = icons[i%3]
+
+            myList.add(MyData("title $i","desc $i", icon))
+        }
     }
 
 
